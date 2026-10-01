@@ -1,3 +1,6 @@
+import subprocess, sys
+subprocess.check_call([sys.executable, "-m", "pip", "install", "rembg", "pillow"])
+
 from rembg import remove
 from PIL import Image
 

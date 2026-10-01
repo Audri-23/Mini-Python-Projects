@@ -1,3 +1,6 @@
+import subprocess, sys
+subprocess.check_call([sys.executable, "-m", "pip", "install", "speedtest-cli"])    
+
 import speedtest
 
 st = speedtest.Speedtest()

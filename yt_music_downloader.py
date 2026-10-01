@@ -1,3 +1,6 @@
+import subprocess, sys
+subprocess.check_call([sys.executable, "-m", "pip", "install", "yt-dlp", "static-ffmpeg"])
+
 import static_ffmpeg
 import yt_dlp
 

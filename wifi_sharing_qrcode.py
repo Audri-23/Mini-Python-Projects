@@ -1,5 +1,4 @@
-import subprocess
-import sys
+import subprocess, sys
 
 # Installing required packages
 subprocess.check_call([sys.executable, "-m", "pip", "install", "qrcode", "pillow"])
