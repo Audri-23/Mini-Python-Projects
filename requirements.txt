@@ -1,0 +1,11 @@
+gallery-dl
+pypdf
+rembg
+pillow
+gTTS
+googletrans==4.0.0-rc1
+qrcode
+speedtest-cli
+yt-dlp
+static-ffmpeg
+manim
