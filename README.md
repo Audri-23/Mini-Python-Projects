@@ -14,15 +14,16 @@ A curated collection of practical, beginner-friendly, and lightweight Python aut
 - [Projects Summary](#-projects-summary)
 - [Detailed Project Guide](#-detailed-project-guide)
   - [1. Animate Text (`animate_text.py`)](#1-animate-text-animate_textpy)
-  - [2. Instagram & X Media Downloader (`instagram_x_media_downloader.py`)](#2-instagram--x-media-downloader-instagram_x_media_downloaderpy)
-  - [3. PDF Merger (`merge_pdf.py`)](#3-pdf-merger-merge_pdfpy)
-  - [4. Background Remover (`remove_image_background.py`)](#4-background-remover-remove_image_backgroundpy)
-  - [5. Text to Speech Converter (`text_to_speech.py`)](#5-text-to-speech-converter-text_to_speechpy)
-  - [6. Language Translator (`translator.py`)](#6-language-translator-translatorpy)
-  - [7. Wi-Fi Password Getter (`wifi_pass_getter.py`)](#7-wi-fi-password-getter-wifi_pass_getterpy)
-  - [8. Wi-Fi Sharing QR Code Generator (`wifi_sharing_qrcode.py`)](#8-wi-fi-sharing-qr-code-generator-wifi_sharing_qrcodepy)
-  - [9. Wi-Fi & Internet Speed Checker (`wifi_speed_checker.py`)](#9-wi-fi--internet-speed-checker-wifi_speed_checkerpy)
-  - [10. YouTube Music Downloader (`yt_music_downloader.py`)](#10-youtube-music-downloader-yt_music_downloaderpy)
+  - [2. Image Format Converter (`image_converter.py`)](#2-image-format-converter-image_converterpy)
+  - [3. Instagram & X Media Downloader (`instagram_x_media_downloader.py`)](#3-instagram--x-media-downloader-instagram_x_media_downloaderpy)
+  - [4. PDF Merger (`merge_pdf.py`)](#4-pdf-merger-merge_pdfpy)
+  - [5. Background Remover (`remove_image_background.py`)](#5-background-remover-remove_image_backgroundpy)
+  - [6. Text to Speech Converter (`text_to_speech.py`)](#6-text-to-speech-converter-text_to_speechpy)
+  - [7. Language Translator (`translator.py`)](#7-language-translator-translatorpy)
+  - [8. Wi-Fi Password Getter (`wifi_pass_getter.py`)](#8-wi-fi-password-getter-wifi_pass_getterpy)
+  - [9. Wi-Fi Sharing QR Code Generator (`wifi_sharing_qrcode.py`)](#9-wi-fi-sharing-qr-code-generator-wifi_sharing_qrcodepy)
+  - [10. Wi-Fi & Internet Speed Checker (`wifi_speed_checker.py`)](#10-wi-fi--internet-speed-checker-wifi_speed_checkerpy)
+  - [11. YouTube Music Downloader (`yt_music_downloader.py`)](#11-youtube-music-downloader-yt_music_downloaderpy)
 - [Getting Started](#-getting-started)
 - [Requirements & Dependencies](#-requirements--dependencies)
 - [Platform Compatibility & Notes](#-platform-compatibility--notes)
@@ -42,6 +43,7 @@ Each script in this repository solves a distinct real-world problem in just a fe
 | Script | Category | Primary Libraries | Description |
 | :--- | :--- | :--- | :--- |
 | [`animate_text.py`](animate_text.py) | Animation & Video | `manim` | Renders a high-definition write-on text animation video. |
+| [`image_converter.py`](image_converter.py) | Image Processing | `pillow` | Batch converts and resizes images between JPG, PNG, and WebP formats. |
 | [`instagram_x_media_downloader.py`](instagram_x_media_downloader.py) | Media Downloader | `gallery-dl` | Downloads photos and videos from Instagram or X (Twitter) URLs. |
 | [`merge_pdf.py`](merge_pdf.py) | Document Processing | `pypdf` | Combines multiple PDF files into a single merged document. |
 | [`remove_image_background.py`](remove_image_background.py) | Image Processing | `rembg`, `pillow` | Removes the background from an image using AI and saves as transparent PNG. |
@@ -67,7 +69,18 @@ Each script in this repository solves a distinct real-world problem in just a fe
 
 ---
 
-### 2. Instagram & X Media Downloader ([`instagram_x_media_downloader.py`](instagram_x_media_downloader.py))
+### 2. Image Format Converter ([`image_converter.py`](image_converter.py))
+- **Description:** Converts images between JPG, PNG, and WebP formats with optional aspect-ratio-preserving resizing, custom compression quality, and non-destructive batch processing.
+- **How to run:**
+  ```bash
+  python image_converter.py
+  ```
+- **Inputs:** Prompts for image file or directory paths, target format (JPG, PNG, or WEBP), optional maximum width and height, quality level, and an output folder.
+- **Output:** Converted images are saved to the designated directory (default: `converted_images/`) along with a summary of dimensions and saved disk space.
+
+---
+
+### 3. Instagram & X Media Downloader ([`instagram_x_media_downloader.py`](instagram_x_media_downloader.py))
 - **Description:** Uses [`gallery-dl`](https://github.com/mikf/gallery-dl) to extract and download media files (images, clips) from supported social media platforms like Instagram and Twitter/X.
 - **How to run:**
   ```bash
@@ -78,7 +91,7 @@ Each script in this repository solves a distinct real-world problem in just a fe
 
 ---
 
-### 3. PDF Merger ([`merge_pdf.py`](merge_pdf.py))
+### 4. PDF Merger ([`merge_pdf.py`](merge_pdf.py))
 - **Description:** Merges multiple PDF files into one continuous document using the modern `pypdf` library.
 - **How to run:**
   1. Place your target PDFs in the project folder (named `file1.pdf`, `file2.pdf`, `file3.pdf`, or edit the list in the script).
@@ -90,7 +103,7 @@ Each script in this repository solves a distinct real-world problem in just a fe
 
 ---
 
-### 4. Background Remover ([`remove_image_background.py`](remove_image_background.py))
+### 5. Background Remover ([`remove_image_background.py`](remove_image_background.py))
 - **Description:** Automatically detects and isolates subjects in photos to remove backgrounds with precision using machine learning via `rembg`.
 - **How to run:**
   1. Place an image named `remove.jpg` in the script directory (or adjust `input_path`).
@@ -102,7 +115,7 @@ Each script in this repository solves a distinct real-world problem in just a fe
 
 ---
 
-### 5. Text to Speech Converter ([`text_to_speech.py`](text_to_speech.py))
+### 6. Text to Speech Converter ([`text_to_speech.py`](text_to_speech.py))
 - **Description:** Converts plain English text to high-quality synthesized speech using the Google Text-to-Speech (`gTTS`) API.
 - **How to run:**
   ```bash
@@ -113,7 +126,7 @@ Each script in this repository solves a distinct real-world problem in just a fe
 
 ---
 
-### 6. Language Translator ([`translator.py`](translator.py))
+### 7. Language Translator ([`translator.py`](translator.py))
 - **Description:** Translates sentences or paragraphs across languages using the Google Translate API wrapper `googletrans`.
 - **How to run:**
   ```bash
@@ -124,7 +137,7 @@ Each script in this repository solves a distinct real-world problem in just a fe
 
 ---
 
-### 7. Wi-Fi Password Getter ([`wifi_pass_getter.py`](wifi_pass_getter.py))
+### 8. Wi-Fi Password Getter ([`wifi_pass_getter.py`](wifi_pass_getter.py))
 - **Description:** Uses Windows native `netsh wlan` shell commands to discover all saved wireless profiles and their cleartext passwords.
 - **How to run:**
   ```bash
@@ -135,7 +148,7 @@ Each script in this repository solves a distinct real-world problem in just a fe
 
 ---
 
-### 8. Wi-Fi Sharing QR Code Generator ([`wifi_sharing_qrcode.py`](wifi_sharing_qrcode.py))
+### 9. Wi-Fi Sharing QR Code Generator ([`wifi_sharing_qrcode.py`](wifi_sharing_qrcode.py))
 - **Description:** Generates standard WPA/WPA2 Wi-Fi authentication QR codes compatible with iOS and Android camera scanners for instant connection without typing passwords.
 - **How to run:**
   ```bash
@@ -146,7 +159,7 @@ Each script in this repository solves a distinct real-world problem in just a fe
 
 ---
 
-### 9. Wi-Fi & Internet Speed Checker ([`wifi_speed_checker.py`](wifi_speed_checker.py))
+### 10. Wi-Fi & Internet Speed Checker ([`wifi_speed_checker.py`](wifi_speed_checker.py))
 - **Description:** Tests internet connection throughput against nearby Speedtest.net servers using `speedtest-cli`.
 - **How to run:**
   ```bash
@@ -156,7 +169,7 @@ Each script in this repository solves a distinct real-world problem in just a fe
 
 ---
 
-### 10. YouTube Music Downloader ([`yt_music_downloader.py`](yt_music_downloader.py))
+### 11. YouTube Music Downloader ([`yt_music_downloader.py`](yt_music_downloader.py))
 - **Description:** Downloads video streams and extracts top-tier audio tracks converted into MP3 format with embedded `ffmpeg` binaries provided by `static-ffmpeg`.
 - **How to run:**
   ```bash
